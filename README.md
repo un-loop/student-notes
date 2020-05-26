@@ -22,7 +22,7 @@ Notes:
 
 8. Send a pull-request to the master branch for the central repository of `unloop:student-notes` you forked (in other words, the original).
 
-###Git Commands
+### Git Commands
 
 - `git status` - Gives you an update of what files have been changed, compared to the last commit.
 - `git add <filename>` - this 'stages' the changes, that are to be committed at the next commit.
