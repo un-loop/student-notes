@@ -24,8 +24,8 @@ Notes:
 
 ###Git Commands
 
-`git status` - Gives you an update of what files have been changed, compared to the last commit.
-`git add <filename>` - this 'stages' the changes, that are to be committed at the next commit.
-`git status` - file you updated should be green, indicating it was added correctly. 
-`git commit -m "message here that describes commit"`
-`git push` - upload the changes to GitHub.com
+- `git status` - Gives you an update of what files have been changed, compared to the last commit.
+- `git add <filename>` - this 'stages' the changes, that are to be committed at the next commit.
+- `git status` - file you updated should be green, indicating it was added correctly. 
+- `git commit -m "message here that describes commit"`
+- `git push` - upload the changes to GitHub.com
