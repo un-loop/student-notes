@@ -12,6 +12,9 @@ touch= new file
 code . = open new dir in vs code
 command B= removes side bar
 command S= save
+mv <file> <folder>
+rm -rf <name of file you want deleted>
+
 
 git clone <url>
 git add <file name>
