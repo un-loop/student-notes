@@ -26,3 +26,10 @@ value - variable property
 
 can pull color from background piture to pul together color scheme
 
+buttons styled to make them noticable and easily differentiated
+
+**attribute selector - selector used by defining attribute of elements
+<element>, [<attribute>='<value>']
+
+**exclusion selector - used to exclude certain elements from selector
+<element>:not([<attribute>='<value>'])
