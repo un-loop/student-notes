@@ -13,3 +13,4 @@
 - `git commit -m "message here to describe the commit"` Adds a description of what was done
 - `git push` upload the changes to GitHub.com
 - `git init` Start new repository
+Hello I am practicing adding in more notes
