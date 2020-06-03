@@ -13,3 +13,8 @@
 - `git commit -m "message here to describe the commit"` Adds a description of what was done
 - `git push` upload the changes to GitHub.com
 - `git init` Start new repository
+- `git add` add file to repository
+<<<<<<< HEAD
+
+=======
+>>>>>>> 72a9c73d90a82038467c705d59db4b011bd09281
