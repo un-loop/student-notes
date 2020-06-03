@@ -28,3 +28,70 @@ sort method defaults to string coparison
 **comparitor - function used to compare 2 or more values as an operation in a sort function
 
 **compound conditions - can use parentheses to change order of operations on AND/OR statements
+
+## testing exercise answers
+
+function findLargestNumber(list) {
+  let largest = list[0];
+  for(let i = 1; i < list.length; i++){
+    if(list[i] > largest){
+      largest = list[i];
+    };
+  };
+
+  return largest;
+}
+
+function makeDogObject() {
+  const dog = {
+    name: 'Fido',
+    color: 'white',
+    age: 6,
+    speak(){
+      return 'woof'
+    }
+  };
+
+  return dog;
+}
+
+function getListOfNames(list) {
+  return list.map(elem => elem.name);
+}
+
+function getAverageAge(list) {
+  let ttlAge = list.reduce((total, elem) => total + elem.age, 0)
+  return ttlAge/list.length;
+}
+
+function getAllEngineers(list) {
+  return list.filter(elem => elem.jobTitle.includes("Engineer")).map(elem => elem.name);
+}
+
+function sort(list) {
+  while((let i = 0) < list.length - 1){
+    if(list[i] < list[i+1]){
+      let holder = list[i];
+      list[i] = list[i+1];
+      list[i+1] = holder;
+      i = (i > 0) ? i+1 : i-1;
+    } else {
+      i++
+    }
+  }
+  return list;
+}
+
+## intro to DOM
+
+**DOM - Document Object Model, objects and methods that communicate with eachother to create effects on the web page. Foundation of connection HTML => CSS => Javascript
+
+**document - javascript object that represents the DOM
+
+**.querySelector - document method that accesses elements based on CSS syntax selectors
+
+** NodeList - list of HTML nodes. Accessing is similar to array syntax, but IT IS NOT ARRAY. can use Array.from(NodeList) to create an array out of NodeList, and then can access like an array of objects
+
+all elements are children (of some degree) of document
+
+event listening bubbles up to parent elements, triggering listening events all the way up to document
