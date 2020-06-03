@@ -1,7 +1,7 @@
 ## Modern JaveScript Cheatsheet
 
 # Notions
-- `Variable declaration: var, const, let are 3 different keywords available to declair a variable
+- `Variable declaration: var, const, let are 3 different keywords available to declair a variable`
 
     -`const variable cannot be reassigned.`
     - `let and var variables can`
@@ -23,8 +23,8 @@
     - `are not accessible before being assigned`
     - `can't be re-declared in the same scope`
     - `can't be reassigned`
-
-
-
-
-
+    - `const variables are not immutable ! Concretely, it means that object and array const declared variables can be mutated.`
+# Arrow function
+- `The ES6 JavaScript update has introduced arrow functions, which is another way to declare and use functions. Here are the benefits they bring:`
+    - `More concise this is picked up from surroundings implicit return`
+    - ``
