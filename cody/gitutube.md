@@ -6,3 +6,5 @@
 -
 ## What is github?
 -Github is a webbased platform used for version control. It simplifies the process of working with other people and allows for multipul team memebers to work on a project together.
+
+## Resolving a github merge conflict
