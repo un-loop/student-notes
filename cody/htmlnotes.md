@@ -14,5 +14,8 @@
 -`<img>` image alt is to describe the picture
 -`<strong>` to make the text bold
 -`<em>` to make the text italic
-
+-`<div>` division to make a generic box
+-`<section>` another box but it is a series of information that is all related.
+-`<article>` Stand alone content. You could copy and paste it in a word document and it would still make sense.
+-
 
