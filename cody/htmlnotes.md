@@ -17,5 +17,6 @@
 -`<div>` division to make a generic box
 -`<section>` another box but it is a series of information that is all related.
 -`<article>` Stand alone content. You could copy and paste it in a word document and it would still make sense.
--
+-`<nav>` is a holder for the navigation bar links
+
 
