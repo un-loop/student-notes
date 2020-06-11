@@ -14,7 +14,12 @@
 - `git push` upload the changes to GitHub.com
 - `git init` Start new repository
 - `git add` add file to repository
-<<<<<<< HEAD
 
-=======
->>>>>>> 72a9c73d90a82038467c705d59db4b011bd09281
+## Git trouble shooting(method bellow not the greatest)
+-merge conflict 
+-`git status` 
+-`git add .`
+-`git commit -m "`
+-`git push`
+
+watch you tube video on how git works and find a second video on to resolve a git merge conflict.
