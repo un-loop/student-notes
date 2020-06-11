@@ -28,3 +28,12 @@ Use `this.<function>.bind(this);` from within the constructor function and after
 When updating an information store outside of the React app, React is not, by default, informed of the change, and so doesn't make use of its powerful re-rendering ability to incorporate the change. State must be changed at some point in this process to make React aware of the change.
 
 Though props are owned by the parent, state is owned by the component. when state is changed, component will rerender itself.
+
+keep state data type as object for consistency and easy access to elements inside. also, !NEVER DIRECTLY MODIFY STATE OUTSIDE OF CONSTRUCTOR FUNCTION! this bypasses important functionality. Use `this.setState()` instead.
+*part of reason directly modifying state is bad practice is because `this.setState` is asyncronous. Directly modifying state can cause race conditions*
+
+**lifecyle functions - React operations that take place at certain points during the pages rendering
+
+use `.concat()` to modify arrays in state, since this creates a shallow copy of the state in memory and won't modify the original
+
+**property initializers - experimental feature, requires Babel to implement at the moment. allow us to use arrow functions for custom component methods without having to bind `this` AND allow us to define initial state outside of constructor using `state = {<initial state>}`
