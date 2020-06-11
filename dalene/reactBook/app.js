@@ -1,94 +1,208 @@
-
-class ProductList extends React.Component {
+class TimersDashboard extends React.Component {
   state = {
-        products: [],
-      };
-    
-  componentDidMount() {
-    this.setState({ products: Seed.products });
-  }
+    timers: [
+      {
+        title: "Practice squat",
+        project: "Gym Chores",
+        id: uuid.v4(),
+        elapsed: 5456099,
+        runningSince: Date.now(),
+      },
+      {
+        title: "Bake squash",
+        project: "Kitchen Chores",
+        id: uuid.v4(),
+        elapsed: 1273998,
+        runningSince: null,
+      },
+    ],
+  };
 
-    handleProductUpVote = (productId) => {
-        const nextProducts = this.state.products.map((product) => {
-          if (product.id === productId) {
-            return Object.assign({}, product, {
-              votes: product.votes + 1,
-            });
-          } else {
-            return product;
-          }
-        });
-        this.setState({
-          products: nextProducts,
-        });
-    }
-    render() {
-      const products = this.state.products.sort((a, b) => (
-          b.votes - a.votes
-      ));
-      const productComponents = products.map((product) => (
-          <Product
-          key={'product-' + product.id}
-          id={product.id}
-          title={product.title}
-          description={product.description}
-          url={product.url}
-          votes={product.votes}
-          submitterAvatarUrl={product.submitterAvatarUrl}
-          productImageUrl={product.productImageUrl}
-          onVote={this.handleProductUpVote}
-          />
-      ));
+  render() {
+    return (
+      <div className="ui three column centered grid">
+        <div className="column">
+          <EditableTimerList timers={this.state.timers} />
+          <ToggleableTimerForm />
+        </div>
+      </div>
+    );
+  }
+}
+
+class ToggleableTimerForm extends React.Component {
+  state = {
+    isOpen: false,
+  };
+
+  handleFormOpen = () => {
+    this.setState({ isOpen: true });
+  };
+
+  handleFormClose = () => {
+    this.setState({ isOpen: false });
+  };
+
+  handleFormSubmit = (timer) => {
+    this.props.onFormSubmit(timer);
+    this.setState({ isOpen: fales });
+  };
+
+  render() {
+    if (this.state.isOpen) {
       return (
-        <div className='ui unstackable items'>
-          {productComponents}
+        <TimerForm
+          onFormSubmit={this.handleFormSubmit}
+          onFormCLose={this.handleFormClose}
+        />
+      );
+    } else {
+      return (
+        <div className="ui basic content center aligned segment">
+          <button
+            className="ui basic button icon"
+            onClick={this.handleFormOpen}
+          >
+            <i className="plus icon" />
+          </button>
         </div>
       );
     }
   }
-  
-  class Product extends React.Component {
-    handleUpVote = () => (
-      this.props.onVote(this.props.id)
-    );
+}
 
-    render() {
+class EditableTimerList extends React.Component {
+  render() {
+    const timers = this.props.timers.map((timer) => (
+      <EditableTimer
+        key={timer.id}
+        id={timer.id}
+        title={timer.title}
+        project={timer.project}
+        elapsed={timer.elapsed}
+        runningSince={timer.runningSince}
+      />
+    ));
+    return <div id="timers">{timers}</div>;
+  }
+}
+
+class EditableTimer extends React.Component {
+  state = {
+    editFormOpen: false,
+  };
+  render() {
+    if (this.state.editFormOpen) {
       return (
-        <div className='item'>
-          <div className='image'>
-            <img src={this.props.productImageUrl} />
+        <TimerForm
+          id={this.props.id}
+          title={this.props.title}
+          project={this.props.project}
+        />
+      );
+    } else {
+      return (
+        <Timer
+          id={this.props.id}
+          title={this.props.title}
+          project={this.props.project}
+          elapsed={this.props.elapsed}
+          runningSince={this.props.runningSince}
+        />
+      );
+    }
+  }
+}
+
+class Timer extends React.Component {
+  render() {
+    const elapsedString = helpers.renderElapsedString(this.props.elapsed);
+    return (
+      <div className="ui centered card">
+        <div className="content">
+          <div className="header">{this.props.title}</div>
+          <div className="meta">{this.props.project}</div>
+          <div className="center aligned description">
+            <h2>{elapsedString}</h2>
           </div>
-          {/* Inside `render` for Product` */}
-          <div className='middle aligned content'>
-            <div className='header'>
-              <a onClick={this.handleUpVote}>
-                <i className='large caret up icon' />
-              </a>
-              {this.props.votes}
-            </div>
-            <div className='description'>
-              <a href={this.props.url}>
-                {this.props.title}
-              </a>
-              <p>
-                {this.props.description}
-              </p>
-            </div>
-            <div className='extra'>
-              <span>Submitted by:</span>
-              <img
-                className='ui avatar image'
-                src={this.props.submitterAvatarUrl}
+          <div className="extra content">
+            <span className="right floated edit icon">
+              <i className="edit icon" />
+            </span>
+            <span className="right floated trash icon">
+              <i className="trash icon" />
+            </span>
+          </div>
+        </div>
+        <div className="ui bottom attached blue basic button">Start</div>
+      </div>
+    );
+  }
+}
+
+class TimerForm extends React.Component {
+  state = {
+    title: this.props.title || "",
+    project: this.props.project || "",
+  };
+
+  handleTitleCHange = (e) => {
+    this.setState({ title: e.target.value });
+  };
+
+  handleProjectChange = (e) => {
+    this.setState({ project: e.target.value });
+  };
+
+  handleSubmit = () => {
+    this.props.onFormSubmit({
+      id: this.props.id,
+      title: this.state.title,
+      project: this.state.project,
+    });
+  };
+
+  render() {
+    const submitText = this.props.id ? "Update" : "Create";
+    return (
+      <div className="ui centered card">
+        <div className="content">
+          <div className="ui form">
+            <div className="field">
+              <label>Title</label>
+              <input
+                type="text"
+                defaultValue={this.state.title}
+                onChange={this.handleTitleChange}
               />
             </div>
+            <div className="field">
+              <label>Project</label>
+              <input
+                type="text"
+                defaultValue={this.state.project}
+                onChange={this.handleProjectChange}
+              />
+            </div>
+            <div className="ui two bottom attached buttons">
+              <button
+                className="ui basic blue button"
+                onClick={this.handleSubmit}
+              >
+                {submitText}
+              </button>
+              <button
+                className="ui basic red button"
+                onClick={this.props.onFormCLose}
+              >
+                Cancel
+              </button>
+            </div>
           </div>
         </div>
-      );
-    }
+      </div>
+    );
   }
-  
-  ReactDOM.render(
-    <ProductList />,
-    document.getElementById('content')
-  );
-  
+}
+
+ReactDOM.render(<TimersDashboard />, document.getElementById("content"));
