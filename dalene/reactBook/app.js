@@ -107,7 +107,6 @@ class TimersDashboard extends React.Component {
     return (
       <div className="ui three column centered grid">
         <div className="column">
-          {/* Inside TimersDashboard.render() */}
           <EditableTimerList
             timers={this.state.timers}
             onFormSubmit={this.handleEditFormSubmit}
@@ -165,7 +164,6 @@ class ToggleableTimerForm extends React.Component {
 
 class EditableTimerList extends React.Component {
   render() {
-    // Inside EditableTimerList.render()
     const timers = this.props.timers.map((timer) => (
       <EditableTimer
         key={timer.id}
@@ -221,7 +219,6 @@ class EditableTimer extends React.Component {
           onFormClose={this.handleFormClose}
         />
       );
-      // Inside EditableTimer
     } else {
       return (
         <Timer
@@ -274,7 +271,7 @@ class Timer extends React.Component {
           <div className="center aligned description">
             <h2>{elapsedString}</h2>
           </div>
-          {/* Inside Timer.render() */}
+
           <div className="extra content">
             <span
               className="right floated edit icon"
