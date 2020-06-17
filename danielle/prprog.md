@@ -98,3 +98,28 @@
   - `I will be exploring all these suggested and more to prepare for zoom-ing with Becky and Dominique next week` -`danielle was here`
   - `troubleshooting with becky`
   - `----------------------------------------------------`
+
+## PP with Sierra in AFTERWARDZ project 6/16
+
+# budget tables - using mok-up as reference guide
+
+- `AFTERWARDZ budget table componant. Google = materialUI.com, React UI framework, API documentaion (props that the componant can accept) looked at information about table componants.(tables display information in a way thats easy to scan, so that other viewers can look for patterns and insites. or in otherwords, a spreadsheet), with 10 different columns(one representing every single year), with 11 rows represent the listed attributes. code samples. Pagination, refered to in this context means = splitting up into pages,so you can flip through chunks of data at one time. used when there is need to go through a large database of information. This cuts down on network speeds. Table componant structure/examples -> simple table vs. dense table, when considering the ammount of information to be included into budget table, dense table example made most sense. copy & pasted the dense table code into the table componant.`
+- `create new componant - defined route in body element in react.js by im`
+
+- `create and importe estimater.js`
+  `created a new route for the estimater.js so that we can see our work in progress in in that page.`
+
+`command + P = file system navigater`
+
+- `creates/ uses URL as a method of mounting and unmounting componants.`
+- `SPA = single page application. SPA advantages: requires no page reloads and no extra time for waiting. HTML/CSS/Scripts load only once throughout the lifespan of an application. Only data is transmitted back and forth.`
+
+* `(command + F) searched for any reference to redux in calculator.js code. found where it had imported an object called connect from react redux so applied the same into estimator as well.`
+* `located a reference to connecting the calculator componant to the reduxs store.`
+* `integrate map() reduct state into estimator.js`
+
+* `Map State To Props = When applied, will re-render in response to changes in the state. map redux state to props in React components. Basically, to access store data from your components.Or taking the state from redux and maping it to the props object in your componant.`
+
+* `table - columns`
+* `redux A predictable state container for JavaScript apps.`
+* `import redux`
