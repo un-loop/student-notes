@@ -1,21 +1,18 @@
 class TimersDashboard extends React.Component {
     state = {
-        timers:[
-            {
-                title: 'Practice squat',
-                project: 'Gym Chores',
-                id: uuid.v4(),
-                elapsed: 5456099,
-                runningSince: Date.now(),
-            },
-            {
-                title: 'Bake squash',
-                project: 'Kitchen Chores',
-                id: uuid.v4(),
-                elapsed: 1273998,
-                runningSince: null,
-            },
-        ],
+        timers:[],
+    };
+
+    componentDidMount() {
+        this.loadTimersFromServer();
+        setInterval(this.loadTimersFromServer, 5000);
+    }
+
+    loadTimersFromServer = () => {
+        client.getTimers(serverTimers => (
+                this.setState({ timers: serverTimers })
+            )
+        );
     };
 
     handleCreateFormSubmit = (timer) => {
@@ -27,15 +24,68 @@ class TimersDashboard extends React.Component {
     };
 
     handleOnRemove = (timerId) => {
-        console.log(timerId)
         this.setState({timers: this.state.timers.filter(elem => elem.id !== timerId)})
+
+        client.deleteTimer({ id: timerId })
     }
+
+    handleStartClick = (timerId) => {
+        this.startTimer(timerId);
+    };
+
+    handleStopClick = (timerId) => {
+        this.stopTimer(timerId);
+    };
 
     createTimer = (timer) => {
         const t = helpers.newTimer(timer);
         this.setState({
             timers: this.state.timers.concat(t),
         });
+
+        client.createTimer(timer)
+    };
+
+    startTimer = (timerId) => {
+        const now = Date.now();
+
+        this.setState({
+            timers: this.state.timers.map(timer => {
+                if (timer.id === timerId) {
+                    return Object.assign({}, timer, {
+                        runningSince: now,
+                    });
+                } else {
+                    return timer;
+                }
+            }),
+        });
+
+        client.startTimer(
+            { id: timerId, start: now }
+        );
+    };
+
+    stopTimer = (timerId) => {
+        const now = Date.now();
+
+        this.setState({
+            timers: this.state.timers.map(timer => {
+                if (timer.id === timerId) {
+                    const lastElapsed = now - timer.runningSince;
+                    return Object.assign({}, timer, {
+                        elapsed: timer.elapsed + lastElapsed,
+                        runningSince: null,
+                    });
+                } else {
+                    return timer;
+                }
+            }),
+        });
+
+        client.stopTimer(
+            { id: timerId, stop:now }
+        )
     };
 
     updateTimer = (attrs) => {
@@ -51,6 +101,8 @@ class TimersDashboard extends React.Component {
                 }
             }),
         });
+
+        client.updateTimer(attrs)
     };
 
     render() {
@@ -61,6 +113,8 @@ class TimersDashboard extends React.Component {
                         timers={this.state.timers}
                         onFormSubmit={this.handleEditFormSubmit}
                         onRemove={this.handleOnRemove}
+                        onStartClick={this.handleStartClick}
+                        onStopClick={this.handleStopClick}
                     />
                     <ToggleableTimerForm
                         onFormSubmit={this.handleCreateFormSubmit}
@@ -135,9 +189,54 @@ class TimerForm extends React.Component {
     }
 }
 
-class Timer extends React.Component {
+class TimerActionButton extends React.Component {
     render() {
-        const elapsedString = helpers.renderElapsedString(this.props.elapsed);
+        if (this.props.timerIsRunning) {
+            return (
+                <div
+                    className='ui bottom attached red basic button'
+                    onClick={this.props.onStopClick}
+                >
+                    Stop
+                </div>
+            );
+        } else {
+            return (
+                <div
+                    className='ui bottom attached green basic button'
+                    onClick={this.props.onStartClick}
+                >
+                    Start
+                </div>
+            );
+        }
+    }
+}
+
+class Timer extends React.Component {
+
+    componentDidMount() {
+        this.forceUpdateInterval = setInterval(
+            () => this.forceUpdate(), 50
+        );
+    }
+
+    componentWillMount() {
+        clearInterval(this.forceUpdateInterval);
+    }
+
+    handleStartClick = () => {
+        this.props.onStartClick(this.props.id);
+    };
+
+    handleStopClick = () => {
+        this.props.onStopClick(this.props.id);
+    };
+
+    render() {
+        const elapsedString = helpers.renderElapsedString(
+            this.props.elapsed, this.props.runningSince
+        );
         return (
             <div className='ui centered card'>
                 <div className='content'>
@@ -167,9 +266,11 @@ class Timer extends React.Component {
                         </span>
                     </div>
                 </div>
-                <div className='ui bottom attached blue basic button'>
-                    Start
-                </div>
+                <TimerActionButton 
+                    timerIsRunning={!!this.props.runningSince}
+                    onStartClick={this.handleStartClick}
+                    onStopClick={this.handleStopClick}
+                />
             </div>
         )
     }
@@ -226,6 +327,8 @@ class EditableTimer extends React.Component {
                     runningSince={this.props.runningSince}
                     onEditClick={this.handleEditClick}
                     onTrashClick={this.handleTrashClick}
+                    onStartClick={this.props.onStartClick}
+                    onStopClick={this.props.onStopClick}
                 />
             )
         }
@@ -244,6 +347,8 @@ class EditableTimerList extends React.Component {
                 runningSince={timer.runningSince}
                 onFormSubmit={this.props.onFormSubmit}
                 onRemove={this.props.onRemove}
+                onStartClick={this.props.onStartClick}
+                onStopClick={this.props.onStopClick}
             />
         ))
         return (

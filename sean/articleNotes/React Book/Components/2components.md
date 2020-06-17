@@ -37,3 +37,9 @@ helpers.js convienent place to store JS code. allows decluttering and maintains 
 a: common naming convention. minimal collection of useful functions. acts like library (ex. jQuery) but it small and specialized to project
 
 using .`map` to iterate through `this.state`, then using `Object.assign()` to reassign new values is often followed format for modifying state
+
+`forceUpdate()`
+
+`componentDidMount()` - runs function after successful mounting of component
+
+`componentWillUnmount()` - runs function before unmounting of component
