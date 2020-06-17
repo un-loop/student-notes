@@ -386,5 +386,4 @@ class TimerForm extends React.Component {
     );
   }
 }
-
 ReactDOM.render(<TimersDashboard />, document.getElementById("content"));
