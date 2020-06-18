@@ -26,3 +26,7 @@ to render -
 `let mount = document.getElementById('root');`
 
 `ReactDOM.render(comp, mount);`
+
+React can manage different kinds of canvases, including *native mobile views*
+
+`htmlFor` used instead of `for` inside JSX `<label>` tags
