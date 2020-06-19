@@ -18,7 +18,17 @@
   - `can't be re-declared in the same scope`
 
 - `const declared variables behave like let variables, but also they can't be reassigned....` -`To sum it up, const variables:`
+
   - `are block scoped`
   - `are not accessible before being assigned`
   - `can't be re-declared in the same scope`
   - `can't be reassigned`
+
+  `-------------------------`
+
+  - `this morning i realized i forgot to submit a pull request after pushing the days notes, when i tried submit the pull request i instead got this error:`  
+    `Can’t automatically merge. Don’t worry, you can still create the pull request.`
+    `i then googled = github "cant automatically merge?" and followed a link to stack overflow that explained I should be able to fix it by saving your changes somewhere else, fetching your repository from github, and then bringing them into sync`
+    `I am determined to solve this issue or at least have exhausted all resources`
+    - `i have read on the subject as of why this happened to better understand how to fix it., this conflict is from when my code being merged into the repo will conflict with the code already there. if my pull request is accepted, it will be up to the repo manager to resolve them. however, it's good practice & good etiquette to make sure my pull request merges w/o conflict. I should be doing the merge conflict resolution work, instead of the upstream contributor(Misha) do the work from your contribution.`
+      `the site suggested i fetch conflicting branch then merge them, instead i used pull and now I'm about to see if it worked.`

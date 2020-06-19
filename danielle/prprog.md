@@ -80,7 +80,6 @@
 - `changed duplicated field in form component, changed ID and value on both form fields..FORM WORKING`
 - `
 - `
-- `----------------------------------------------------`
 
 ## pairprogramming with Misha- 6/12 -Shared several resources and encouraged us to make new habits of staying connected and stay connected to others who are successful and active in tech industry as well as community.
 
@@ -103,7 +102,9 @@
 
 # budget tables - using mok-up as reference guide
 
-- `AFTERWARDZ budget table componant. Google = materialUI.com, React UI framework, API documentaion (props that the componant can accept) looked at information about table componants.(tables display information in a way thats easy to scan, so that other viewers can look for patterns and insites. or in otherwords, a spreadsheet), with 10 different columns(one representing every single year), with 11 rows represent the listed attributes. code samples. Pagination, refered to in this context means = splitting up into pages,so you can flip through chunks of data at one time. used when there is need to go through a large database of information. This cuts down on network speeds. Table componant structure/examples -> simple table vs. dense table, when considering the ammount of information to be included into budget table, dense table example made most sense. copy & pasted the dense table code into the table componant.`
+- `AFTERWARDZ budget table componant. Google = materialUI.com, React UI framework, API documentaion (props that the componant can accept) looked at information about table componants.(tables display information in a way thats easy to scan, so that other viewers can look for patterns and insites. or in otherwords, a spreadsheet), with 10 different columns(one representing every single year), with 11 rows represent the listed attributes. code samples.`
+  `Pagination, refered to in this context means = splitting up into pages,so you can flip through chunks of data at one time. used when there is need to go through a large database of information. This cuts down on network speeds.`
+  `Table componant structure/examples -> simple table vs. dense table, when considering the ammount of information to be included into budget table, dense table example made most sense. copy & pasted the dense table code into the table componant.`
 - `create new componant - defined route in body element in react.js by im`
 
 - `create and importe estimater.js`
@@ -123,3 +124,31 @@
 * `table - columns`
 * `redux A predictable state container for JavaScript apps.`
 * `import redux`
+
+## pair programmed with Misha - aftwerwardz - implimented customer CSS requests
+
+- `Gave insite as to how he organizes his desktops while working on project and how helps improve productivity`
+- `Fonts - use Merriweather and Lato, searched for code to change font to Merryweather.`
+  `copy/paste to <head> tag:`
+  `<link href=’http://fonts.googleapis.com/css?family=Merriweather&#8217;rel=’stylesheet’ type=’text/css’>`
+  `Then Then add Merriweather to all heading tags(H1, H2, H3, H4, H5, H6) in CSS font stacks:`
+  `h1 { font-family: ‘Merriweather’, Georgia, serif; }`
+  `Next client requests Lato for the rest, downloaded Lato fonts & impliment it into App.css`
+  `add ., commit, push to repository`
+- `Next client want colors changed in css, refered to color scheme, search all areas that old colors are applied in styling, search in App.css, once located all old color scheme, deleated where it was added that conflicted with what we added for new color of font`
+  `adjusted the weight of font style to bold`
+  `add ., commit, push to repository`
+
+## pair programmed with Misha - aftwerwardz - more customer CSS requests - watch and learn session
+
+- `change text box style, button color, removed calculator button, troubleshooting why img would'nt stay on top-right of page, tried removing class name-NO, cite tool in App.scss, tried justify: start-NO, z-index...?() affects verticle position, removed nav ul-NO, made note-to deal with later time..moved on to next..,tool tip- gives info to users about functionality when mouse hovers over, wrapped with tool tip code, wrapped it around the direct element instead of the surrounding div tag`
+- `modify existing module- onclose button- used react usestate hook to set up a way for the module to open, create variable called openHelpModule, come with function to set openHelpModule, with default of false, when true- open module`
+- `created function called help, took componant and repuposed it for our new componant, removed unused componants, create file help.js`
+- `SUMMARIZED: created a var inside of state that determined if module should be open or not, used code already had from dialog componant that determined if componant would load or not inside of module, created componant that was to be opened in the module, if user needed help then the module would open`
+- `html code to write out:`
+  `header h2`
+  `header h4`
+  `ol,li`
+  `something broke in css code...(made comment)`
+  `made note for client - suggest to client to reference links`
+  ``
