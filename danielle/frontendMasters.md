@@ -6,6 +6,7 @@
 - `HTML - ul, ol, li, h1, p, br, blockquote, img,`
 - `W3school exercise2-5,headings, paragraphs1-3, comments, links1-3 & 5, images(1, 3, 5, 6), lists1-2`
 - `created an about page - paragraph w/info about me. paragraph what I'd like in web dev`
+
 - `made list 3 things about me.favorite quote, pic of me, link to feq visited site`
 
 # <img> tag
@@ -19,6 +20,10 @@
 - `downloading & adding an image:`
   `added img tag with link to local/downloaded img file located in project folder`
 - `Blockquote<blockquote>, strong<str> and emphisis<em> tags`
+
+- ` made list 3 things about me.favorite quote, pic of me, link to feq visited site `
+- ` daniell was here testing process`
+
 
 ## Frontend Masters - website embeds & github pages
 
