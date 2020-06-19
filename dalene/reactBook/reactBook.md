@@ -23,4 +23,32 @@ REACT BOOK
 Chapter 2
 
 - JSON stands for JavaScript Object Notation. JSON enables us to serialize a JavaScript object and read/write it from a text file.
--
+- Array’s filter() method accepts a function that is used to “test” each element in the array. It returns a new array containing all the elements that “passed” the test. If the function returns true, the element is kept.
+
+Chapter
+
+- In React, we do not directly manipulate the actual DOM. Instead, we must manipulate the virtual representation and let React take care of changing the browser’s DOM.
+- The Virtual DOM is a tree of JavaScript objects that represents the actual DOM.
+- React builds a virtual representation of the DOM a tree of JavaScript objects that represent the “actual DOM”
+- Problems with modifying the DOM = it’s hard to keep track of changes & It can be slow
+- One difference between React components and HTML tags is in the naming. HTML tags start with
+  a lowercase letter, while React components start with an uppercase.
+  JSX Attribute Expressions
+- In order to use a JavaScript expression in a component’s attribute, we wrap it in curly braces {} instead of quotes "".
+- The key thing to keep in mind is that JSX is syntactic sugar to call React.createElement.
+- JSX is going to parse the tags we write and then create JavaScript objects.
+- JSX is a convenience syntax to help build the component tree.
+- As we saw earlier, when we use JSX tags in our code, it gets converted to a ReactElement:
+- ReactElement is stateless and immutable. If we want to add interac-
+  tivity (with state) into our app, we need another piece of the puzzle: ReactComponent.
+
+CHAPTER
+
+- A ReactComponent is a JavaScript object that, at a minimum, has a render() function. render() is
+  expected to return a ReactElement.
+  • render() a ReactElement (which will eventually become the real DOM) and
+  • attach functionality to this section of the page
+  • render() - the one required function on every ReactComponent  • props - the “input parameters” to our components  • context - a “global variable” for our components  • state - a way to hold data that is local to a component (that affects rendering) • Stateless components - a simplified way to write reusable components
+  • children - how to interact and manipulate child components • statics - how to create “class methods” on our components
+- Passing data through attributes to the component is often called passing props.
+- We can pass any JavaScript object through props.
