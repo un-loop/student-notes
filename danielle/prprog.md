@@ -125,7 +125,7 @@
 * `redux A predictable state container for JavaScript apps.`
 * `import redux`
 
-## pair programmed with Misha 6/11 - aftwerwardz - implimented customer CSS requests
+## pair programmed with Misha - aftwerwardz - implimented customer CSS requests
 
 - `Gave insite as to how he organizes his desktops while working on project and how helps improve productivity`
 - `Fonts - use Merriweather and Lato, searched for code to change font to Merryweather.`
@@ -137,3 +137,18 @@
   `add ., commit, push to repository`
 - `Next client want colors changed in css, refered to color scheme, search all areas that old colors are applied in styling, search in App.css, once located all old color scheme, deleated where it was added that conflicted with what we added for new color of font`
   `adjusted the weight of font style to bold`
+  `add ., commit, push to repository`
+
+## pair programmed with Misha - aftwerwardz - more customer CSS requests - watch and learn session
+
+- `change text box style, button color, removed calculator button, troubleshooting why img would'nt stay on top-right of page, tried removing class name-NO, cite tool in App.scss, tried justify: start-NO, z-index...?() affects verticle position, removed nav ul-NO, made note-to deal with later time..moved on to next..,tool tip- gives info to users about functionality when mouse hovers over, wrapped with tool tip code, wrapped it around the direct element instead of the surrounding div tag`
+- `modify existing module- onclose button- used react usestate hook to set up a way for the module to open, create variable called openHelpModule, come with function to set openHelpModule, with default of false, when true- open module`
+- `created function called help, took componant and repuposed it for our new componant, removed unused componants, create file help.js`
+- `SUMMARIZED: created a var inside of state that determined if module should be open or not, used code already had from dialog componant that determined if componant would load or not inside of module, created componant that was to be opened in the module, if user needed help then the module would open`
+- `html code to write out:`
+  `header h2`
+  `header h4`
+  `ol,li`
+  `something broke in css code...(made comment)`
+  `made note for client - suggest to client to reference links`
+  ``
