@@ -2,7 +2,7 @@ REACT BOOK
 
 - The Document Object Model (DOM) refers to the browser’s HTML tree that makes up a web page.
 - web server, live-server, should refresh the page automatically when it detects that is has changed.
-- To open the console in Chrome, navigate to View > Developer > JavaScript Console. Or, just press Command + Option + J on a Mac
+- To open the console in Chrome, navigate to View > Developer > JavaScript Console.Or, just press Command + Option + J on a Mac
 - JSX attribute values must be delimited by either braces or quotes.
 - A child component does not own its props. Parent components own the props of child components.
 - In JavaScript, if we treat an array or object as immutable it means we cannot or should not make modifications to it.
@@ -48,7 +48,15 @@ CHAPTER
   expected to return a ReactElement.
   • render() a ReactElement (which will eventually become the real DOM) and
   • attach functionality to this section of the page
-  • render() - the one required function on every ReactComponent  • props - the “input parameters” to our components  • context - a “global variable” for our components  • state - a way to hold data that is local to a component (that affects rendering) • Stateless components - a simplified way to write reusable components
+  • render() - the one required function on every ReactComponent • props - the “input parameters” to our components • context - a “global variable” for our components • state - a way to hold data that is local to a component (that affects rendering) • Stateless components - a simplified way to write reusable components
   • children - how to interact and manipulate child components • statics - how to create “class methods” on our components
 - Passing data through attributes to the component is often called passing props.
 - We can pass any JavaScript object through props.
+- we can refer to child components in the tree using this.props.children.
+- The difference between map() and forEach() is that the return value of map() is an array of the result of the callback function, whereas forEach() does not collect results.
+
+CHAPTER FORMS
+
+- Forms transform your web site into a web app.
+- Form inputs modify data, both on the page and the server.
+- evt = these functions are event handlers.
