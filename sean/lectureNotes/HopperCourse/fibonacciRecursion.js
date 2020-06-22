@@ -22,6 +22,7 @@ function limitedFib (n, seq = [1,1]){
 };
 
 //infinitely prints fibonacci numbers in sequence to console
+//called with fib()
 function fib (seq = [1,1]){
     console.log(seq[1]);
     return fib([seq[1], seq[0] + seq[1]]);
