@@ -16,4 +16,11 @@ tracking form input in state allows uncontrolled components to become controlled
 
 using onChange functions, we can keep state in line with the displayed values of form elements. This means we can use the state as the 'source of truth' for forms and maintain consistent rendering
 
-stopped: pg. 192
+validation required to ensure that only valid information is passed through form. this is vitally important both for safety and security
+
+`_loading` property used to designate loading status. `_` prefix, by convention, used to represent values that relate only to UI
+correction: it seems that it is not only related to UI, but also to any tracker that checks the status of events that may require waiting. this may actually be related to UI in the form of loading-bars and waiting-wheels.
+
+can create reactive elements by using onchange functions to modify options further into the form based on input entered earlier on. ex. https://www.ekwb.com/custom-loop-configurator/
+
+Redux - halted at pg. 224, moved to cover next to chapters to build familiarity with Redux
