@@ -63,12 +63,12 @@ CHAPTER FORMS
 • placeholder: This will be passed straight through to the input child element. Similar to a label, this tells the user what data to the Field expects. 
 • name: We want this for the same reason we provide name to input elements: we’ll use this in the event handler decide where to store input data and validation errors. 
 • value: This is how our parent form can initialize the Field with a value, or it can use this to update the Field with a new value. This is similar to how the value prop is used on an input. 
-• validate: A function that returns validation errors (if any) when run. • onChange: An event handler to be run when the Field changes. This function will accept an 
+• validate: A function that returns validation errors (if any) when run.• onChange: An event handler to be run when the Field changes. This function will accept an 
 event object as an argument. 
 
-static propTypes = { placeholder: PropTypes.string, 
+static propTypes = {placeholder: PropTypes.string, 
 name: PropTypes.string.isRequired, 
-value: PropTypes.string, validate: PropTypes.func, 
+value: PropTypes.string,validate: PropTypes.func, 
 onChange: PropTypes.func.isRequired 
 }; 
 - apiClient is a simple object we created to simulate asynchronous loading and saving.
@@ -78,12 +78,12 @@ CHAPTER CREATE REACT APP
 - • placeholder: This will be passed straight through to the input child element. Similar to a label, this tells the user what data to the Field expects. 
 • name: We want this for the same reason we provide name to input elements: we’ll use this in the event handler decide where to store input data and validation errors. 
 • value: This is how our parent form can initialize the Field with a value, or it can use this to update the Field with a new value. This is similar to how the value prop is used on an input. 
-• validate: A function that returns validation errors (if any) when run. • onChange: An event handler to be run when the Field changes. This function will accept an 
+• validate: A function that returns validation errors (if any) when run.• onChange: An event handler to be run when the Field changes. This function will accept an 
 event object as an argument. 
 
-static propTypes = { placeholder: PropTypes.string, 
+static propTypes = {placeholder: PropTypes.string, 
 name: PropTypes.string.isRequired, 
-value: PropTypes.string, validate: PropTypes.func, 
+value: PropTypes.string,validate: PropTypes.func, 
 onChange: PropTypes.func.isRequired 
 }; 
 - apiClient is a simple object we created to simulate asynchronous loading and saving.
@@ -93,12 +93,12 @@ CHAPTER CREATE REACT APP
 - • placeholder: This will be passed straight through to the input child element. Similar to a label, this tells the user what data to the Field expects. 
 • name: We want this for the same reason we provide name to input elements: we’ll use this in the event handler decide where to store input data and validation errors. 
 • value: This is how our parent form can initialize the Field with a value, or it can use this to update the Field with a new value. This is similar to how the value prop is used on an input. 
-• validate: A function that returns validation errors (if any) when run. • onChange: An event handler to be run when the Field changes. This function will accept an 
+• validate: A function that returns validation errors (if any) when run.• onChange: An event handler to be run when the Field changes. This function will accept an 
 event object as an argument. 
 
-static propTypes = { placeholder: PropTypes.string, 
+static propTypes = {placeholder: PropTypes.string, 
 name: PropTypes.string.isRequired, 
-value: PropTypes.string, validate: PropTypes.func, 
+value: PropTypes.string,validate: PropTypes.func, 
 onChange: PropTypes.func.isRequired 
 }; 
 - apiClient is a simple object we created to simulate asynchronous loading and saving.
@@ -108,17 +108,22 @@ CHAPTER CREATE REACT APP
 • placeholder: This will be passed straight through to the input child element. Similar to a label, this tells the user what data to the Field expects. 
 • name: We want this for the same reason we provide name to input elements: we’ll use this in the event handler decide where to store input data and validation errors. 
 • value: This is how our parent form can initialize the Field with a value, or it can use this to update the Field with a new value. This is similar to how the value prop is used on an input. 
-• validate: A function that returns validation errors (if any) when run. • onChange: An event handler to be run when the Field changes. This function will accept an 
+• validate: A function that returns validation errors (if any) when run.• onChange: An event handler to be run when the Field changes. This function will accept an 
 event object as an argument. 
 
-static propTypes = { placeholder: PropTypes.string, 
+static propTypes = {placeholder: PropTypes.string, 
 name: PropTypes.string.isRequired, 
-value: PropTypes.string, validate: PropTypes.func, 
+value: PropTypes.string,validate: PropTypes.func, 
 onChange: PropTypes.func.isRequired 
 }; 
 - apiClient is a simple object we created to simulate asynchronous loading and saving.
 
 CHAPTER CREATE REACT APP
 - Create React App is just a boilerplate generator. The react-scripts package, specified in package.json, is the engine that will make everything work. 
-
+- $ ls -a the -a flag for the ls command displays all files, including “hidden” files 
+- Concurrently = is a utility for running multiple processes. 
+- Cross-Origin Resource Sharing (or CORS). The browser prevents these types of requests from scripts for security reasons. 
+- Use split to get an array of the words in the string. Spaces, dashes, and underscores will be considered delimiters. 
+- Array’s join() combines all the members of an array into a string.  
+- String’s split() splits a string into an array of strings. It accepts as an argument the character(s) you would like to split on. The argument can be either a string or a regular expression. 
 
