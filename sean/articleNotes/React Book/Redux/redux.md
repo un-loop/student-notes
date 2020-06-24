@@ -22,4 +22,10 @@ Redux reducers must be 'pure functions':
 - Will always have the same output for a given set of inputs
 - Does not alter any information outside of the function itself
 
-paused at pg. 467
+Redux store uses 'observer pattern' to notify React of state changes.
+
+high-level components use `store.getState()` to pull state instead of storing it internally and checking it with `this.state`
+
+?if `subscribe()` is called inside `componentDidMount()`, and `subscribe()`
+
+all states don't need to remain in Redux. local states are useful for storing form data and displays of elements that will only be contained in the component and not passed along levels.
