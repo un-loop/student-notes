@@ -18,7 +18,14 @@
   - `can't be re-declared in the same scope`
 
 - `const declared variables behave like let variables, but also they can't be reassigned....` -`To sum it up, const variables:`
+
   - `are block scoped`
   - `are not accessible before being assigned`
   - `can't be re-declared in the same scope`
   - `can't be reassigned`
+
+  `-------------------------`
+
+  - `this morning i realized i forgot to submit a pull request after pushing the days notes, when i tried submit the pull request i instead got this error:`  
+    `Can’t automatically merge. Don’t worry, you can still create the pull request.`
+    `i then googled = github "cant automatically merge?" and followed a link to stack overflow that explained I should be able to fix it by saving your changes somewhere else, fetching your repository from github, and then bringing them into sync`
