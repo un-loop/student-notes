@@ -151,4 +151,57 @@
   `ol,li`
   `something broke in css code...(made comment)`
   `made note for client - suggest to client to reference links`
-  ``
+  `---------------------`
+
+## PP with Misha - React
+
+## difference between useState and useEffect:
+
+# useState defined:
+
+`useState allows our functional components which used to be stateless become stateful`
+
+# useEffect defined:
+
+`useEffect allows our functional components leverage the component lifecycle hooks which were, in the past, only supported for class components.`
+
+## difference between State and Props
+
+# State defined:
+
+`State are React friendly variables that get directly initialized/created inside the React component`
+`State comes from within. comes from the child`
+
+# Props defined:
+
+`Props(external), short for properties, are variables/data that the parent component passes down to the child component`
+
+## difference between React Hook and Class Component
+
+`React Hook allows you to use React features and local state w/o writing a class. they let you “hook onto” React state and features inside function components.`
+
+# React Hook Defined:
+
+- `React hooks a new, more efficent and dynamic way react uses to manage state`
+  `with React Hook you can use React features w/o writing a class component and local state.`
+
+# Class Componant defined:
+
+- `class component is an outdated way to manage state - a lifecycle method`
+  `in React you can define a component class. it requires you to create a render function that extends from React.Component and will return a React element.`
+
+## React defined:
+
+`React alows you to create reusable componants that display info about the UI`
+
+## How does react automatically rerenders things?
+
+`the whole point of React is to be able to rerender elements in your app effectively and dynamically. this can be done with State and with Props.`
+
+-`during session we created simple React componants and impliment a simple API to use to display some data/ use a reusable component to display that data` -`opened repository in VSC- (code .) -> app.js -> local host server` -`app component is a function called app - the function returns all the JSX =(combines JavaScript & HTML together) which allows you to auto inject JavaScript in with HTML tags at any time.`
+
+`React hooks a new way react uses to manage state`
+
+- `useState - creates a state obj and it creates the function that updates the value of that state fucntion and when that fucntion is executed, thats when react knows to look and determin it needs to rerender graphics on device`
+
+- `use effect -`
