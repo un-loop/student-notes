@@ -2,7 +2,7 @@ REACT BOOK
 
 - The Document Object Model (DOM) refers to the browser’s HTML tree that makes up a web page.
 - web server, live-server, should refresh the page automatically when it detects that is has changed.
-- To open the console in Chrome, navigate to View > Developer > JavaScript Console. Or, just press Command + Option + J on a Mac
+- To open the console in Chrome, navigate to View > Developer > JavaScript Console.Or, just press Command + Option + J on a Mac
 - JSX attribute values must be delimited by either braces or quotes.
 - A child component does not own its props. Parent components own the props of child components.
 - In JavaScript, if we treat an array or object as immutable it means we cannot or should not make modifications to it.
@@ -48,7 +48,82 @@ CHAPTER
   expected to return a ReactElement.
   • render() a ReactElement (which will eventually become the real DOM) and
   • attach functionality to this section of the page
-  • render() - the one required function on every ReactComponent  • props - the “input parameters” to our components  • context - a “global variable” for our components  • state - a way to hold data that is local to a component (that affects rendering) • Stateless components - a simplified way to write reusable components
+  • render() - the one required function on every ReactComponent • props - the “input parameters” to our components • context - a “global variable” for our components • state - a way to hold data that is local to a component (that affects rendering) • Stateless components - a simplified way to write reusable components
   • children - how to interact and manipulate child components • statics - how to create “class methods” on our components
 - Passing data through attributes to the component is often called passing props.
 - We can pass any JavaScript object through props.
+- we can refer to child components in the tree using this.props.children.
+- The difference between map() and forEach() is that the return value of map() is an array of the result of the callback function, whereas forEach() does not collect results.
+
+CHAPTER FORMS
+
+- Forms transform your web site into a web app.
+- Form inputs modify data, both on the page and the server.
+- evt = these functions are event handlers.
+• placeholder: This will be passed straight through to the input child element. Similar to a label, this tells the user what data to the Field expects. 
+• name: We want this for the same reason we provide name to input elements: we’ll use this in the event handler decide where to store input data and validation errors. 
+• value: This is how our parent form can initialize the Field with a value, or it can use this to update the Field with a new value. This is similar to how the value prop is used on an input. 
+• validate: A function that returns validation errors (if any) when run.• onChange: An event handler to be run when the Field changes. This function will accept an 
+event object as an argument. 
+
+static propTypes = {placeholder: PropTypes.string, 
+name: PropTypes.string.isRequired, 
+value: PropTypes.string,validate: PropTypes.func, 
+onChange: PropTypes.func.isRequired 
+}; 
+- apiClient is a simple object we created to simulate asynchronous loading and saving.
+
+CHAPTER CREATE REACT APP
+- Create React App is just a boilerplate generator. The react-scripts package, specified in package.json, is the engine that will make everything work. 
+- • placeholder: This will be passed straight through to the input child element. Similar to a label, this tells the user what data to the Field expects. 
+• name: We want this for the same reason we provide name to input elements: we’ll use this in the event handler decide where to store input data and validation errors. 
+• value: This is how our parent form can initialize the Field with a value, or it can use this to update the Field with a new value. This is similar to how the value prop is used on an input. 
+• validate: A function that returns validation errors (if any) when run.• onChange: An event handler to be run when the Field changes. This function will accept an 
+event object as an argument. 
+
+static propTypes = {placeholder: PropTypes.string, 
+name: PropTypes.string.isRequired, 
+value: PropTypes.string,validate: PropTypes.func, 
+onChange: PropTypes.func.isRequired 
+}; 
+- apiClient is a simple object we created to simulate asynchronous loading and saving.
+
+CHAPTER CREATE REACT APP
+- Create React App is just a boilerplate generator. The react-scripts package, specified in package.json, is the engine that will make everything work. 
+- • placeholder: This will be passed straight through to the input child element. Similar to a label, this tells the user what data to the Field expects. 
+• name: We want this for the same reason we provide name to input elements: we’ll use this in the event handler decide where to store input data and validation errors. 
+• value: This is how our parent form can initialize the Field with a value, or it can use this to update the Field with a new value. This is similar to how the value prop is used on an input. 
+• validate: A function that returns validation errors (if any) when run.• onChange: An event handler to be run when the Field changes. This function will accept an 
+event object as an argument. 
+
+static propTypes = {placeholder: PropTypes.string, 
+name: PropTypes.string.isRequired, 
+value: PropTypes.string,validate: PropTypes.func, 
+onChange: PropTypes.func.isRequired 
+}; 
+- apiClient is a simple object we created to simulate asynchronous loading and saving.
+
+CHAPTER CREATE REACT APP
+- Create React App is just a boilerplate generator. The react-scripts package, specified in package.json, is the engine that will make everything work. 
+• placeholder: This will be passed straight through to the input child element. Similar to a label, this tells the user what data to the Field expects. 
+• name: We want this for the same reason we provide name to input elements: we’ll use this in the event handler decide where to store input data and validation errors. 
+• value: This is how our parent form can initialize the Field with a value, or it can use this to update the Field with a new value. This is similar to how the value prop is used on an input. 
+• validate: A function that returns validation errors (if any) when run.• onChange: An event handler to be run when the Field changes. This function will accept an 
+event object as an argument. 
+
+static propTypes = {placeholder: PropTypes.string, 
+name: PropTypes.string.isRequired, 
+value: PropTypes.string,validate: PropTypes.func, 
+onChange: PropTypes.func.isRequired 
+}; 
+- apiClient is a simple object we created to simulate asynchronous loading and saving.
+
+CHAPTER CREATE REACT APP
+- Create React App is just a boilerplate generator. The react-scripts package, specified in package.json, is the engine that will make everything work. 
+- $ ls -a the -a flag for the ls command displays all files, including “hidden” files 
+- Concurrently = is a utility for running multiple processes. 
+- Cross-Origin Resource Sharing (or CORS). The browser prevents these types of requests from scripts for security reasons. 
+- Use split to get an array of the words in the string. Spaces, dashes, and underscores will be considered delimiters. 
+- Array’s join() combines all the members of an array into a string.  
+- String’s split() splits a string into an array of strings. It accepts as an argument the character(s) you would like to split on. The argument can be either a string or a regular expression. 
+
