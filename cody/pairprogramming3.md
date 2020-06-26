@@ -42,3 +42,4 @@ Fold/Unfold All Methods:
 -`<Shift+Cmd+->`Zoom in with + and zoom out with -
 -`<Cmd+B>`Open or close sdiebar
 -`<Ctrl+Shift+`> New terminal
+ 
