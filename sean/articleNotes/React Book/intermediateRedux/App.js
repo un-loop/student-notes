@@ -1,37 +1,14 @@
 
 import React from 'react';
 import uuid from 'uuid';
+import { createStore, combineReducers } from 'redux';
 
-function createStore(reducer, initialState) {
-  let state = initialState;
-  const listeners = [];
+const reducer = combineReducers({
+  activeThreadId: activeThreadIdReducer,
+  threads: threadsReducer
+});
 
-  const subscribe = (listener) => (
-    listeners.push(listener)
-  );
-
-  const getState = () => (state);
-
-  const dispatch = (action) => {
-    state = reducer(state, action);
-    listeners.forEach(l => l());
-  };
-
-  return {
-    subscribe,
-    getState,
-    dispatch,
-  };
-}
-
-function reducer(state, action) {
-  return {
-    activeThreadId: activeThreadIdReducer(state.activeThreadId, action),
-    threads: threadsReducer(state.threads, action),
-  };
-}
-
-function activeThreadIdReducer(state, action) {
+function activeThreadIdReducer(state = '1-fca2', action) {
   if (action.type === 'OPEN_THREAD') {
     return action.id;
   } else {
@@ -39,23 +16,22 @@ function activeThreadIdReducer(state, action) {
   }
 }
 
-function messagesReducer (state, action) {
-  if (action.type === 'ADD_MESSAGE') {
-    const newMessage = {
-      text: action.text,
-      timestamp: Date.now(),
-      id: uuid.v4(),
-    };
-    return state.concat(newMessage);
-  } else if (action.type === 'DELETE_MESSAGE') {
-    const threadIndex = state.findIndex(
-      t => t.messages.find(m => m.id === action.id)
-    );
-    const oldThread = state[threadIndex];
-    const newThread = {
-      ...oldThread,
-      messages: messagesReducer(oldThread.messages, action),
-    };
+function messagesReducer(state = [], action) {
+  switch (action.type) {
+    case 'ADD_MESSAGE': {
+      const newMessage = {
+        text: action.text,
+        timestamp: Date.now(),
+        id: uuid.v4(),
+      };
+      return state.concat(newMessage);
+    }
+    case 'DELETE_MESSAGE': {
+      return state.filter(m => m.id !== action.id);
+    }
+    default: {
+      return state;
+    }
   }
 }
 
@@ -71,60 +47,48 @@ function findThreadIndex(threads, action) {
         t => t.messages.find(m => m.id === action.id)
       );
     }
+    default: break;
   }
 }
 
-function threadsReducer(state, action) {
+function threadsReducer(state  = [
+  {
+  id: '1-fca2',
+  title: 'Buzz Aldrin',
+  messages: messagesReducer(undefined, {}),
+  },
+  {
+  id: '2-be91',
+  title: 'Michael Collins',
+  messages: messagesReducer(undefined, {}),
+  },
+], action) {
   switch (action.type) {
-    case 'ADD_MESSAGE' :
-    const threadIndex = state.findIndex(
-      t => t.id === action.threadId
-    );
-    const oldThread = state[threadIndex];
-    const newThread = {
-      ...oldThread,
-      messages: messagesReducer(oldThread.messages, action),
-    };
-  case 'DELETE_MESSAGE' :
-    const threadIndex = state.findIndex(
-      t => t.messages.find(m => m.id === action.id)
-    );
-    const oldThread = state[threadIndex];
-    const newThread = {
-      ...oldThread,
-      messages: oldThread.messages.filter(m => m.id !== action.id),
-    };
+    case 'ADD_MESSAGE':
+    case 'DELETE_MESSAGE': {
+      const threadIndex = findThreadIndex(state, action);
+
+      const oldThread = state[threadIndex];
+      const newThread = {
+        ...oldThread,
+        messages: messagesReducer(oldThread.messages, action),
+      };
+
+      return [
+        ...state.slice(0, threadIndex),
+        newThread,
+        ...state.slice(
+          threadIndex + 1, state.length
+        ),
+      ];
+    }
+    default: {
+      return state;
+    }
   }
-  return [
-    ...state.slice(0, threadIndex),
-    newThread,
-    ...state.slice(threadIndex + 1, state.lenth),
-  ];
 }
 
-const initialState = { 
-  activeThreadId: '1-fca2',
-  threads: [
-    {
-      id: '1-fca2',
-      title: 'Buzz Aldrin',
-      messages: [
-        {
-          text: 'Twelve minutes to ignition.',
-          timestamp: Date.now(),
-          id: uuid.v4(),
-        },
-      ],
-    },
-    {
-      id: '2-fcb3',
-      title: 'Houston',
-      messages: [],
-    }
-  ],
- };
-
-const store = createStore(reducer, initialState);
+const store = createStore(reducer);
 
 class App extends React.Component {
   componentDidMount() {
