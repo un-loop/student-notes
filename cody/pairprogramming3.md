@@ -19,50 +19,26 @@
 -`<Ctrl+P>` Move up
 -`<Ctrl+H>` Delete character on the left
 -`<Ctrl+D>` Delete the character on the right
--`<Cmd+Right>`Go to the end of the lind
+-`<Cmd+Right>`Go to the end of the lin
 -`<Cmd+Left>` Go the Beggining of the line
-Move by Word:
-Opt+Right
-Opt+Left
-Go to End/Beginning of File:
-Cmd+Down
-Cmd+Up
-Select to End/Beginning of Line:
-Shift+Cmd+Right
-Shift+Cmd+Left
-Extend Selection Below/Above:
-Shift+Down
-Shift+Up
-I use these when moving, duplicating, and commenting out multiple lines.
-Extend Selection by Word:
-Shift+Opt+Right
-Shift+Opt+Left
+-`<Opt+Right>`Move to the right by word
+-`<Opt+Left>` Move to the left by word
+-`<Cmd+Down>`Go to end of the file
+-`<Cmd+Up>` Go to the beginning of file
+-`<Shift+Cmd+Right>`Select the remainder of the line to the right of the line
+-`<Shift+Cmd+Left>`Select the remainder of the line to the left
+-`<Shift+Down>`Extend selection below
+-`<Shift+Up>`Extend selection above
+-`<Shift+Opt+Right>`Extend selection by word to the right
+-`<Shift+Opt+Left>`Extend selection by word to the left
 Fold/Unfold All Methods:
-Cmd+K+0
-Cmd+K+J
-Toggle Line Comment:
-Cmd+/
-Editor/Window Management
-Close Editor/Window:
-Cmd+W
-File Management
-Save:
-Cmd+S
-Delete File:
-Cmd+Del
-Display
-Open Command Palette:
-Shift+Cmd+P
-Zoom In/Out:
-Shift+Cmd+-
-Cmd+-
-Toggle Sidebar Visibility:
-Cmd+B
-New Terminal:
-Ctrl+Shift+`
-You can also open a terminal with the following shortcut.
-Show Panel:
-Cmd+J
-Preferences
-Open Settings:
-Cmd+,
+-`<Cmd+K+0>` Fold and unfold all methods
+-`<Cmd+K+J>`Fold and unfold all methods(hmm tried this out and these two commands don't seem useful)
+-`<Cmd+/>`Comment out code
+-`<Cmd+W>`Close editor or window
+-`<Cmd+S>`Save
+-`<Cmd+Del>`Delete File
+-`<Shift+Cmd+P>`Open command pallette
+-`<Shift+Cmd+->`Zoom in with + and zoom out with -
+-`<Cmd+B>`Open or close sdiebar
+-`<Ctrl+Shift+`> New terminal
