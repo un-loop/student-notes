@@ -207,3 +207,13 @@
 - `use effect -`
 
 testing commit
+
+## PP with Misha - more React in Afterwardz
+
+`took turns associating static number in JSON with one of the existing state objects.`
+`made new piece of REDUX state: by creating initial state(empty string), in App.js - inside of useEffect parsInt function - import function(update form)- let object with ID of "ID" and value of JSON - run props.updateForm. allowing us to access the ID anywhere - to add new piece of redux state . pass props after -> created piece of redux state. so it can overwrite empty string.`
+
+`order of radio buttons in afterwards form - troubleshooting how button look on form.`
+`removed the row in style. - moved the label span into the button div (the style applies to label also) - to override the flex(column) default.- added padding(margin). had to remove the card componant - (command + d to select all of the same text that is highlighted)`
+`moved radio group into profile page, to find all preferences of ____ to command + shift + f to search all files. cleaned up all unused code.`
+`undefined object -> forms. the error of forms is undefined.`
