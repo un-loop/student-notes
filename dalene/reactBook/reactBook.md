@@ -168,3 +168,5 @@ we want React to generate the page. So an evolution of that request flow using R
 - We’ll need to supply Route with two arguments as props: 
 • The path to match against the location 
 • The component to render when the location matches path
+- Using ternary operators inside of JSX is common in React. This is because we can’t embed multi-line statements like an if/else clause inside our JSX. 
+- In JSX, if the prop is listed but not assigned to a value it defaults the value to true. 
