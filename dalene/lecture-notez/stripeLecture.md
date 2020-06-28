@@ -1,19 +1,19 @@
 STRIPE LECTURE
 
--Online payments processer
--Empower developers, move quick, grow reveue
+-Online payments processor
+-Empower developers, move quick, grow revenue
 -Grow global commerce online
 -Global payments & treasury network
--People paying buisnesses & vice virsa
+-People paying businesses & vice versa
 -All in one payment processor
--Whent public in 2011
--Building buisness infastructure
--Additional suppor for data in stripe sigma
--Billing thresholds issur invoice, create & send branded invoices securly
+-Went public in 2011
+-Building business infrastructure
+-Additional support for data in stripe sigma
+-Billing thresholds issue invoice, create & send branded invoices securely
 -13 langurages supported
--Stripe Connect= find, prioritize & manage your commected accounts in the dashboard
--Set up your own Stripe Connecg accunt for your own biz
--Connect & disconect with other buisnesses
+-Stripe Connect= find, prioritize & manage your coneckted accounts in the dashboard
+-Set up your own Stripe Connecg account for your own biz
+-Connect & disconnect with other businesses
 -Stripe is full access & Express is a limited access account
 -Smart payment page that works on any device
--Works accross countrys, languages, and currencys
+-Works accross country's, languages, and currency's
