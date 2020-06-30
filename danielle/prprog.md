@@ -279,3 +279,12 @@ return result
 # Lexical scoping(also known as static scoping)
 
 `lexical scoping is its oppositeof dynamic scoping. the scope and value of a variable is determined from where it is defined. It doesn’t change.`
+
+`-----------`
+
+## PP with Misha - React hook, SQL, JSON, Python - Afterwardz
+
+-`added new route called /prperty/fetch/ten to Python API - connected that route to database - intercepted the request body (JSON from REACT) to be able to use it as a variable - wrote a SQL query to store mock data - executed the sql command - converted the sql output into Python dict (dictionary - Pythons version of an object), to a string (proper JSON) and returned the JSON string to the REACT application - then created another fetch request that sends the post request to the URL - included a variable in the request body then received the response that was a string response while checking if the string is shorter than 25 charactors: if true > get err message - if else > JSON.parse(data) - use localStaorage.setItem to store item locally in REACT application. We did this to save time not having to download 50 objects each time we made any changes`
+`when componant first mounts - then get stored item - store item item inside React State hook - opperated on that array - extract objects inside array that match same index number - set active array being displayed to be the temp array with matching ID's`
+
+-`sql is basically a spredsheet - comma seperated values that are grouped together by rows and columns` -`cannot send actual programming languages through HTTP - only strings`
