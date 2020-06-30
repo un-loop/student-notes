@@ -1,0 +1,45 @@
+## Pair Programing
+# Short Cuts
+-`<command + shift + f>` will search the whole repository
+-`<command+f>` will search the file
+-`<Cmd+C>` Copy line
+-`<Cmd+X>` Cut the line
+-`<Shift+Cmd+K>` Delete
+-`<Cmd+Enter>` or `<Shift+Cmd+Enter>` insert line below or above
+-`<Opt+Down>` Move line Down
+-`<Opt+Up>` Move line Up
+-`<Shift+Opt+Down>` Copy line Down
+-`<Shift+Opt+Up>`Copy line Up
+-`<Cmd+D>` Find the next match
+-`<Opt+Click>` Add Cursors
+-`<Shift+Cmd+\>` Jump to matching bracket
+-`<Ctrl+F>` Move Forward
+-`<Ctrl+B>` Move Backwords
+-`<Ctrl+N>` Move Down
+-`<Ctrl+P>` Move up
+-`<Ctrl+H>` Delete character on the left
+-`<Ctrl+D>` Delete the character on the right
+-`<Cmd+Right>`Go to the end of the lin
+-`<Cmd+Left>` Go the Beggining of the line
+-`<Opt+Right>`Move to the right by word
+-`<Opt+Left>` Move to the left by word
+-`<Cmd+Down>`Go to end of the file
+-`<Cmd+Up>` Go to the beginning of file
+-`<Shift+Cmd+Right>`Select the remainder of the line to the right of the line
+-`<Shift+Cmd+Left>`Select the remainder of the line to the left
+-`<Shift+Down>`Extend selection below
+-`<Shift+Up>`Extend selection above
+-`<Shift+Opt+Right>`Extend selection by word to the right
+-`<Shift+Opt+Left>`Extend selection by word to the left
+Fold/Unfold All Methods:
+-`<Cmd+K+0>` Fold and unfold all methods
+-`<Cmd+K+J>`Fold and unfold all methods(hmm tried this out and these two commands don't seem useful)
+-`<Cmd+/>`Comment out code
+-`<Cmd+W>`Close editor or window
+-`<Cmd+S>`Save
+-`<Cmd+Del>`Delete File
+-`<Shift+Cmd+P>`Open command pallette
+-`<Shift+Cmd+->`Zoom in with + and zoom out with -
+-`<Cmd+B>`Open or close sdiebar
+-`<Ctrl+Shift+`> New terminal
+ 
