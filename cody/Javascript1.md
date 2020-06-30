@@ -48,3 +48,5 @@ for (let i=0; i < timesToRepeat; i++){
 - A function is a bit of reusable code. 
 - A function allows you to define a block of code, give it a name and then execute it as many times as you want.
 - A function can include one or more parameters or none at all.
+
+WHy are you not adding my comit notes
