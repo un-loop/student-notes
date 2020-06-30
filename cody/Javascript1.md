@@ -28,10 +28,23 @@ console.log(friendsAtYourParty)
 # For Loop
 - The for statement creates a loop that is executed as long as a condition is true.
 - The loop will stop once the condition becomes false.
-- EX let friendsAtYourParty = 0;
+- EX 
+`<let friendsAtYourParty = 0;
 for (let i=0; i<=10; i++) {
     friendsAtYourParty++;
 }
+console.log(friendsAtYourParty)>
+# Looping excersise
+- EX `<const character ="f";
+const timesToRepeat = 5;
+let myString = "";
+for (let i=0; i < timesToRepeat; i++){
+  myString = myString + character;
+}
+;console.log(myString);
+///output fffff>`
 
-console.log(friendsAtYourParty)
-- 
+# Functions and Scope
+- A function is a bit of reusable code. 
+- A function allows you to define a block of code, give it a name and then execute it as many times as you want.
+- A function can include one or more parameters or none at all.
