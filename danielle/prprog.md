@@ -217,3 +217,65 @@ testing commit
 `removed the row in style. - moved the label span into the button div (the style applies to label also) - to override the flex(column) default.- added padding(margin). had to remove the card componant - (command + d to select all of the same text that is highlighted)`
 `moved radio group into profile page, to find all preferences of ____ to command + shift + f to search all files. cleaned up all unused code.`
 `undefined object -> forms. the error of forms is undefined.`
+`----------`
+
+# pp with Mikayla - calculator
+
+`used an event delegation pattern to listen, since keys are all children of .calculator__keys. to listen for all keypresses`
+`created a data-action attribute to determine the type of key that is clicked.`
+`console.log - from every calculator`
+`concatenate to string - append the clicked key to the displayed number a string.`
+`added class to the operator key.`
+`replaced previous display with the new number. The operator key - pressed state. released the pressed state by removing the class from all keys through a forEach loop:`
+`updated the display for clicked key. created custom attribute to tell if previous key is an operator key`
+`saved the first number by adding to custom attribute when the operator button gets clicked.`
+if (action === 'calculate') {
+const firstValue = calculator.dataset.firstValue
+const operator = calculator.dataset.operator
+const secondValue = displayedNum
+
+display.textContent = calculate(firstValue, operator, secondValue)
+}
+`created a calculate function that takes three parameters: the first number, the operator, and the second number.`
+const calculate = (n1, operator, n2) => {
+let result = ''
+
+if (operator === 'add') {
+result = n1 + n2
+} else if (operator === 'subtract') {
+result = n1 - n2
+} else if (operator === 'multiply') {
+result = n1 \* n2
+} else if (operator === 'divide') {
+result = n1 / n2
+}
+
+return result
+}
+`convert strings to numbers with parseInt and parseFloat functions`
+`check if displayed number contains a . with includes method to check strings for a decimal point(.) If a string is found, returns true; if not, it returns false`
+`found bug - additional clicks on the operator key calculates a value when it shouldn’t`
+`------------`
+
+# Scope: determines the accessibility (visibility) of variables.
+
+# Variables defined inside a function are not accessible (visible) from outside the function.
+
+# Local variables:
+
+-`variables declared in a JavaScript function, become LOCAL to that function. local variables have function scope. they can only be accessed from in that function. local variables are only recognized inside their functions, so variables with same name can be used in different functions. local variables are created when function starts, & deleted when that function is completed`
+
+# Global variables
+
+-`variable declared outside a function, becomes GLOBAL. a global variable has global scope. all scripts and functions on web page has access to it. scope determines accessibility of variables, objects, & functions from different areas of the code.`
+
+-`if you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.`
+
+# Dynamic scoping(dynamic= means change):
+
+`scope and value of variable can be diff, it depends from where the function gets called. The meaning of a variable can change at runtime`
+`searching takes place in local function first, then into the function that called that local function. then it searches in the function that called that function, and so on, up the call stack`
+
+# Lexical scoping(also known as static scoping)
+
+`lexical scoping is its oppositeof dynamic scoping. the scope and value of a variable is determined from where it is defined. It doesn’t change.`
