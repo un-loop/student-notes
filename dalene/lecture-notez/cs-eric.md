@@ -7,4 +7,5 @@
 - hufftree dose not get modified once it's built (removes redundency)
 
 - Algorythoms
-  Bubble sort = array of intagers they may or may not be unique a number may or may not show up 2 times.
+- Bubble sort = array of intagers they may or may not be unique a number may or may not show up 2 times.
+- it uses nested loops
