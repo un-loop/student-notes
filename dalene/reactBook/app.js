@@ -1,94 +1,167 @@
+import PropTypes from 'prop-types';
+import React from 'react';
 
-class ProductList extends React.Component {
-  state = {
-        products: [],
-      };
-    
-  componentDidMount() {
-    this.setState({ products: Seed.products });
+const Route = ({ path, component }, { location }) => {
+  const pathname = location.pathname;
+  if (pathname.match(path)) {
+    return (
+      React.createElement(component)
+    );
+  } else {
+    return null;
+  }
+};
+
+Route.contextTypes = {
+  location: PropTypes.object,
+};
+
+const Link = ({ to, children }, { history }) => (
+  <a
+  onClick={(e) => {
+    e.preventDefault();
+    history.push(to);
+  }}
+  href={to}
+  >
+    {children}
+  </a>
+);
+
+Link.contextTypes = {
+  history: PropTypes.object,
+};
+
+class Redirect extends React.Component {
+
+  static contextTypes = {
+    history: PropTypes.object,
   }
 
-    handleProductUpVote = (productId) => {
-        const nextProducts = this.state.products.map((product) => {
-          if (product.id === productId) {
-            return Object.assign({}, product, {
-              votes: product.votes + 1,
-            });
-          } else {
-            return product;
-          }
-        });
-        this.setState({
-          products: nextProducts,
-        });
-    }
-    render() {
-      const products = this.state.products.sort((a, b) => (
-          b.votes - a.votes
-      ));
-      const productComponents = products.map((product) => (
-          <Product
-          key={'product-' + product.id}
-          id={product.id}
-          title={product.title}
-          description={product.description}
-          url={product.url}
-          votes={product.votes}
-          submitterAvatarUrl={product.submitterAvatarUrl}
-          productImageUrl={product.productImageUrl}
-          onVote={this.handleProductUpVote}
-          />
-      ));
-      return (
-        <div className='ui unstackable items'>
-          {productComponents}
-        </div>
-      );
-    }
+  componentDidMount() {
+    const history = this.context.history;
+    const to = this.props.to;
+    history.push(to);
+  }
+
+  render() {
+    return null;
+  }
+}
+
+class Router extends React.Component {
+
+  static childContextTypes = {
+    history: PropTypes.object,
+    location: PropTypes.object,
+  };
+
+  constructor(props) {
+    super(props);
+
+    this.history = createHistory();
+    this.history.listen(() => this.forceUpdate());
+  }
+
+  getChildContext() {
+    return {
+      history: this.history,
+      location: window.location,
+    };
   }
   
-  class Product extends React.Component {
-    handleUpVote = () => (
-      this.props.onVote(this.props.id)
+  render() {
+    return this.props.children;
+  }
+}
+
+  const App = () => (
+    <Router>   
+      <div
+        className='ui text container'
+      >
+        <h2 className='ui dividing header'>
+          Which body of water?
+        </h2>
+
+        <ul>
+          <li>
+            <Link to='/atlantic'>
+              <code>/atlantic</code>
+            </Link>
+          </li>
+          <li>
+            <Link to='/pacific'>
+              <code>/pacific</code>
+            </Link>
+          </li>
+
+        </ul>
+          <li>
+            <Link to='/black-sea'>
+              <code>/black-sea</code>
+            </Link>
+          </li>
+        <hr />
+        {/* We'll insert the Route components here */}
+        <Route path='/atlantic' component={Atlantic} />
+        <Route path='/pacific' component={Pacific} />
+        <Route path='/black-sea' component={BlackSea} />
+      </div>
+    </Router> 
     );
 
-    render() {
-      return (
-        <div className='item'>
-          <div className='image'>
-            <img src={this.props.productImageUrl} />
-          </div>
-          {/* Inside `render` for Product` */}
-          <div className='middle aligned content'>
-            <div className='header'>
-              <a onClick={this.handleUpVote}>
-                <i className='large caret up icon' />
-              </a>
-              {this.props.votes}
-            </div>
-            <div className='description'>
-              <a href={this.props.url}>
-                {this.props.title}
-              </a>
-              <p>
-                {this.props.description}
-              </p>
-            </div>
-            <div className='extra'>
-              <span>Submitted by:</span>
-              <img
-                className='ui avatar image'
-                src={this.props.submitterAvatarUrl}
-              />
-            </div>
-          </div>
-        </div>
-      );
-    }
+const Atlantic = () => (
+  <div>
+    <h3>Atlantic Ocean</h3>
+    <p>
+      The Atlantic Ocean covers approximately 1/5th of the
+      surface of the earth.
+    </p>
+  </div>
+);
+
+const Pacific = () => (
+  <div>
+    <h3>Pacific Ocean</h3>
+    <p>
+      Ferdinand Magellan, a Portuguese explorer, named the ocean
+      'mar pacifico' in 1521, which means peaceful sea.
+    </p>
+  </div>
+);
+
+class BlackSea extends React.Component {
+  state = {
+    counter: 3,
+  };
+
+  componentDidMount() {
+    this.interval = setInterval(() => (
+      this.setState(prevState => {
+        return {
+          counter: prevState.counter - 1,
+        };
+      }
+    )), 1000);
   }
-  
-  ReactDOM.render(
-    <ProductList />,
-    document.getElementById('content')
-  );
-  
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+render() {
+  return (
+    <div>
+      <h3>Black Sea</h3>
+      <p>Nothing to sea [sic} here ...</p>
+      <p>Redirecting in {this.state.counter}...</p>
+      {
+        (this.state.counter < 1) ? (
+          <Redirect to='/' />
+        ) : null
+      }
+    </div>
+    );
+  }
+}
+
+export default App;

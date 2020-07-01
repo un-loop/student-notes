@@ -6,7 +6,7 @@ https://attachments.convertkitcdnn.com/153160/351e01a1-4704-4443-9a7d-a94ff2922a
 
 keyboarding
 ttps://www.keybr.com/
-http://www.speedcoder.net/lessons/js/1/ 
+http://www.speedcoder.net/lessons/js/1/
 free boot camp!!!
 https://frontendmasters.com/bootcamp/
 
@@ -39,3 +39,8 @@ https://www.denverlibrary.org/your-criminal-record
 - angel.co: job hunting for start ups, startups that are looking for internships ware there at and what they pay
 
 DONT TAKE UNPAID INTERNSHIPS & NOTHING UNDER \$40,000 YR
+
+TECH JOB BOARD
+https://ycombinator.monday.vc/
+
+programmer.mepeoplewhocodeproud_programmerspure.python^ig accounts to followlatinaswhocode
