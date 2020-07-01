@@ -94,3 +94,11 @@ for (let i=0; i < timesToRepeat; i++){
     country: "USA"
   }
 };
+# Global Objects
+- The global objecgt provides variables and functions that are available anyehrtr.
+# Arrays
+-  An array is a special type of variable that stores the multioke values using a speacial syntax.
+- An array can be created using an array litteral sytax or a constructor syntax
+- Array litteral EX: let stringArray = ["one", "two", "three"]
+- Array constructor EX: let numericArrau = new Array(3)
+- Multiple values are seperated by commas
