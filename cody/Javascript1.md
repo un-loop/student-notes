@@ -48,3 +48,57 @@ for (let i=0; i < timesToRepeat; i++){
 - A function is a bit of reusable code. 
 - A function allows you to define a block of code, give it a name and then execute it as many times as you want.
 - A function can include one or more parameters or none at all.
+- You can have as many parameters as you want, however if you have more than 3 or 4 you should probably make a smaller function.
+# Scope
+- Global scope is any variable declared outside of a function.
+- Global scope is accessible from anywhere in your code
+- Local scope is declared within that function
+- Local variables are only accessible with in that function
+# Built in Functions
+- There are several functions that are pre-built in for use in javascipt they are also known as methods
+- These include math functions suck as Math.round
+- The math functions always start with Math
+# Objects
+- An object is a collection of properties and a property is a association between a name or key and a value.
+- Objects contain keys and values
+- The keys are on the left side of the : and they repersent how you get that piece data out of the object
+- Each key has to be unique but you can have multiple values that are the same.
+- The value is the answer. It's on hte right side of :.
+- EX Object {
+  "city": "Seattle",
+  "favoriteFood": "🌮",
+  "name": "Brian Holt",
+  "numberOfTacosWanted": 100,
+  "state": "WA",
+  "wantsTacosRightNow": true,
+} 
+- Objects can have there own functions and these are called methods.
+- A method is a function on a object.
+- EX const dog = {
+  name: "dog",
+  speak() {
+    console.log("woof woof");
+  }
+};
+- short hand for funciton is speak() but you could write speak: function()
+- Objects can have nested objects in them.
+- A nexted object is an object inside of an objoect
+- EX const me = {
+  name: {
+    first: "Brian",
+    last: "Holt"
+  },
+  location: {
+    city: "Seattle",
+    state: "WA",
+    country: "USA"
+  }
+};
+# Global Objects
+- The global objecgt provides variables and functions that are available anyehrtr.
+# Arrays
+-  An array is a special type of variable that stores the multioke values using a speacial syntax.
+- An array can be created using an array litteral sytax or a constructor syntax
+- Array litteral EX: let stringArray = ["one", "two", "three"]
+- Array constructor EX: let numericArrau = new Array(3)
+- Multiple values are seperated by commas
