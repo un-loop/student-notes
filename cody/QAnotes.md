@@ -6,3 +6,5 @@
     3) Expected behavior
     4) Browser used
     5) Screen shot
+        - command + shift + 4 (will choose the screen size)
+        - command + shift + 3 (will do the whole screen)
