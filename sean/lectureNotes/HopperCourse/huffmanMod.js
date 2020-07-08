@@ -100,3 +100,44 @@ function heapsortWithCompare(array_to_sort, compare)  // modifies input array
     }
     return a;
 }
+
+function huffmanParse (hufftree){
+    let letterAssociation = {};
+    function nextLvl (node, path = []) {
+        if (!'letter' in node) {
+            path.push(0)
+            nextLvl(node.left, path);
+            path.pop()
+            //returns later function to trigger inbuilt tail-recursion optimization
+            return nextLvl(node.right, path.push(1))
+        } else {
+            letterAssociation[node.symbol] = path;
+            return;
+        }
+    };
+    nextLvl(hufftree);
+    return letterAssociation
+}
+
+//DO NOT PUSH THIS BUTTON!!!
+function allArraysAreSums () {
+    function arrayToSum (elem) {
+        if(Array.isArray(elem)){
+            elem = elem.reduce((sum, val) => {
+                if (Array.isArray(val)){
+                    arrayToSum(val);
+                }
+                return sum + val;
+            });
+        } else if (typeof elem === 'object'){
+            for (prop in elem) {
+                arrayToSum(elem.prop);
+            }
+        } else {
+            console.log(elem);
+        }
+    };
+    arrayToSum(window);
+    console.log('lulz');
+    return ({} + []);
+};
