@@ -151,4 +151,140 @@
   `ol,li`
   `something broke in css code...(made comment)`
   `made note for client - suggest to client to reference links`
-  ``
+  `---------------------`
+
+## PP with Misha - React
+
+## difference between useState and useEffect:
+
+# useState defined:
+
+`useState allows our functional components which used to be stateless become stateful`
+
+# useEffect defined:
+
+`useEffect allows our functional components leverage the component lifecycle hooks which were, in the past, only supported for class components.`
+
+## difference between State and Props
+
+# State defined:
+
+`State are React friendly variables that get directly initialized/created inside the React component`
+`State comes from within. comes from the child`
+
+# Props defined:
+
+`Props(external), short for properties, are variables/data that the parent component passes down to the child component`
+
+## difference between React Hook and Class Component
+
+`React Hook allows you to use React features and local state w/o writing a class. they let you “hook onto” React state and features inside function components.`
+
+# React Hook Defined:
+
+- `React hooks a new, more efficent and dynamic way react uses to manage state`
+  `with React Hook you can use React features w/o writing a class component and local state.`
+
+# Class Componant defined:
+
+- `class component is an outdated way to manage state - a lifecycle method`
+  `in React you can define a component class. it requires you to create a render function that extends from React.Component and will return a React element.`
+
+## React defined:
+
+`React alows you to create reusable componants that display info about the UI`
+
+## How does react automatically rerenders things?
+
+`the whole point of React is to be able to rerender elements in your app effectively and dynamically. this can be done with State and with Props.`
+
+-`during session we created simple React componants and impliment a simple API to use to display some data/ use a reusable component to display that data` -`opened repository in VSC- (code .) -> app.js -> local host server` -`app component is a function called app - the function returns all the JSX =(combines JavaScript & HTML together) which allows you to auto inject JavaScript in with HTML tags at any time.`
+
+`React hooks a new way react uses to manage state`
+
+- `useState - creates a state obj and it creates the function that updates the value of that state fucntion and when that fucntion is executed, thats when react knows to look and determin it needs to rerender graphics on device`
+
+- `use effect -`
+
+testing commit
+
+## PP with Misha - more React in Afterwardz
+
+`took turns associating static number in JSON with one of the existing state objects.`
+`made new piece of REDUX state: by creating initial state(empty string), in App.js - inside of useEffect parsInt function - import function(update form)- let object with ID of "ID" and value of JSON - run props.updateForm. allowing us to access the ID anywhere - to add new piece of redux state . pass props after -> created piece of redux state. so it can overwrite empty string.`
+
+`order of radio buttons in afterwards form - troubleshooting how button look on form.`
+`removed the row in style. - moved the label span into the button div (the style applies to label also) - to override the flex(column) default.- added padding(margin). had to remove the card componant - (command + d to select all of the same text that is highlighted)`
+`moved radio group into profile page, to find all preferences of ____ to command + shift + f to search all files. cleaned up all unused code.`
+`undefined object -> forms. the error of forms is undefined.`
+`----------`
+
+# pp with Mikayla - calculator
+
+`used an event delegation pattern to listen, since keys are all children of .calculator__keys. to listen for all keypresses`
+`created a data-action attribute to determine the type of key that is clicked.`
+`console.log - from every calculator`
+`concatenate to string - append the clicked key to the displayed number a string.`
+`added class to the operator key.`
+`replaced previous display with the new number. The operator key - pressed state. released the pressed state by removing the class from all keys through a forEach loop:`
+`updated the display for clicked key. created custom attribute to tell if previous key is an operator key`
+`saved the first number by adding to custom attribute when the operator button gets clicked.`
+if (action === 'calculate') {
+const firstValue = calculator.dataset.firstValue
+const operator = calculator.dataset.operator
+const secondValue = displayedNum
+
+display.textContent = calculate(firstValue, operator, secondValue)
+}
+`created a calculate function that takes three parameters: the first number, the operator, and the second number.`
+const calculate = (n1, operator, n2) => {
+let result = ''
+
+if (operator === 'add') {
+result = n1 + n2
+} else if (operator === 'subtract') {
+result = n1 - n2
+} else if (operator === 'multiply') {
+result = n1 \* n2
+} else if (operator === 'divide') {
+result = n1 / n2
+}
+
+return result
+}
+`convert strings to numbers with parseInt and parseFloat functions`
+`check if displayed number contains a . with includes method to check strings for a decimal point(.) If a string is found, returns true; if not, it returns false`
+`found bug - additional clicks on the operator key calculates a value when it shouldn’t`
+`------------`
+
+# Scope: determines the accessibility (visibility) of variables.
+
+# Variables defined inside a function are not accessible (visible) from outside the function.
+
+# Local variables:
+
+-`variables declared in a JavaScript function, become LOCAL to that function. local variables have function scope. they can only be accessed from in that function. local variables are only recognized inside their functions, so variables with same name can be used in different functions. local variables are created when function starts, & deleted when that function is completed`
+
+# Global variables
+
+-`variable declared outside a function, becomes GLOBAL. a global variable has global scope. all scripts and functions on web page has access to it. scope determines accessibility of variables, objects, & functions from different areas of the code.`
+
+-`if you assign a value to a variable that has not been declared, it will automatically become a GLOBAL variable.`
+
+# Dynamic scoping(dynamic= means change):
+
+`scope and value of variable can be diff, it depends from where the function gets called. The meaning of a variable can change at runtime`
+`searching takes place in local function first, then into the function that called that local function. then it searches in the function that called that function, and so on, up the call stack`
+
+# Lexical scoping(also known as static scoping)
+
+`lexical scoping is its oppositeof dynamic scoping. the scope and value of a variable is determined from where it is defined. It doesn’t change.`
+
+`-----------`
+
+## PP with Misha - React hook, SQL, JSON, Python - Afterwardz
+
+-`added new route called /prperty/fetch/ten to Python API - connected that route to database - intercepted the request body (JSON from REACT) to be able to use it as a variable - wrote a SQL query to store mock data - executed the sql command - converted the sql output into Python dict (dictionary - Pythons version of an object), to a string (proper JSON) and returned the JSON string to the REACT application - then created another fetch request that sends the post request to the URL - included a variable in the request body then received the response that was a string response while checking if the string is shorter than 25 charactors: if true > get err message - if else > JSON.parse(data) - use localStaorage.setItem to store item locally in REACT application. We did this to save time not having to download 50 objects each time we made any changes`
+`when componant first mounts - then get stored item - store item item inside React State hook - opperated on that array - extract objects inside array that match same index number - set active array being displayed to be the temp array with matching ID's`
+
+-`sql is basically a spredsheet - comma seperated values that are grouped together by rows and columns` -`cannot send actual programming languages through HTTP - only strings`

@@ -31,3 +31,7 @@
   `bullet point details about what I liked/disliked on 5 - 7 projects I built while in Unloops full-stack JS class at Purdy, add them to my resume document and send to her`
   `add my projects to github and collaborate my repository with her`
   `i will be asking Becky to pp with me at first as I navigate my way through github to submit my files`
+
+  ## PP with Emily 7/1
+
+  `briefly looked over few of project files. pointed out areas to note for bullet points. mentioned Mishas suggestion of keeping original and improving another copy of project to be able to compare with original was w/o internet or other resources- she liked idea- then explored github for better understanding of how it works. - arranged to meet again in a week`
