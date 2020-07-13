@@ -151,3 +151,22 @@ CHAPTER CREATE REACT APP
 
 1. The event to simulate (like 'change' or 'click'). This determines which event handler to use (like onChange or onClick).
 2. The event object (optional).
+- When a component is shallow-rendered, the usual re-rendering hooks do not apply. If any state changes instigated by a simulate() are made asynchronously, you must call update() to re-render the component. 
+• You can assert that one number is close to another with toBeCloseTo()• You can match a string against a regular expression with toMatch()• You can control time, allowing you to work with setTimeout or setInterval 
+• You can assert that an array contains a specific subset of members with jasmine.arrayContaining()• You can assert that an object contains a specific subset of key/value pairs with jasmine.objectContaining() 
+
+CHAPTER ROUTING
+we want React to generate the page. So an evolution of that request flow using React might look like this: 
+1. Browser makes a request to the server for this page. 
+2. The server doesn’t care about the pathname. Instead, it just returns a standard index.html that includes the React app and any static assets. 
+3. The React app mounts. 
+4. The React app extracts the identifiers from the URL and uses these identifiers to make an API call to fetch the data for the artist and the album. It might make this call to the same server. 
+5. The React app renders the page using data it received from the API call. 
+- For modifying the location of an app, we use links and redirects. 
+- For determining what to render at a given location, we also use two React Router components, Route and Switch. 
+- In React Router, Route is a component that determines whether or not to render a specified component based on the app’s location. 
+- We’ll need to supply Route with two arguments as props: 
+• The path to match against the location 
+• The component to render when the location matches path
+- Using ternary operators inside of JSX is common in React. This is because we can’t embed multi-line statements like an if/else clause inside our JSX. 
+- In JSX, if the prop is listed but not assigned to a value it defaults the value to true. 

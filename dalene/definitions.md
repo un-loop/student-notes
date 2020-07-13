@@ -38,3 +38,7 @@ Sets are used to store the unique values of any type.
 Getters and Setters
 The ‘get’ property is used to get the value of the variable and ‘set’ property is used to set the value to the variable.
 
+Continuous Integration?
+
+Explicit Return: This method of returning uses the return keyword to return the result from the function.
+Implicit Return: This method of returning doesn't use the return keyword, and returns the function result for you when you are working with a one line function body.
