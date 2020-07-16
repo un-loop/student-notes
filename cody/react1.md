@@ -1,4 +1,4 @@
-## React Notes
+## React Notes Lesson 1-5
 # ReactDOM.render
 - The first argument tells what to render
 - The second argument tells where to render
@@ -139,3 +139,11 @@ class Content extends React.Component {
         )
     }
 };
+# Destructuring
+- The following 2 lines mean the same thing:
+    - const activity = this.props.activity;
+    - const {activity} = thi.props;
+- Then you can use this new content by passing in an object as a prop instead of a hard-coded string
+- EX <Content activity = {moment1} />
+
+
