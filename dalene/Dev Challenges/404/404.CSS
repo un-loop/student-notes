@@ -1,0 +1,12 @@
+img {
+  margin-left: 150px;
+}
+
+div {
+  float: right;
+  width: 400px;
+  height: 400px;
+  margin-top: 1px;
+  margin-right: 200px;
+  font-family: monospace;
+}
