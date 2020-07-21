@@ -17,4 +17,3 @@
         this.setState({activities:data})
     }
 };
-# componentWillUpdate() & componentDidUpdate
