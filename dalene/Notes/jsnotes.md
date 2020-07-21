@@ -89,3 +89,13 @@ are functions that already exist.
 -JavaScript can over ride CSS
 -use alert for debuging purposes
 -The EventTarget method addEventListener() sets up a function that will be called whenever the specified event is delivered to the target.(should be on a button)
+
+- Like every other operation, is coercion helpful in a equality comparison or not?
+- By becoming a better dev i should be making critical thinking decisions for myself
+- == is not about comparisons with un known types.  == is about comparisons with known types optionally where conversions are helpful.
+- Undeclared = never declared any where
+- undefined = has been declared but dose not have a value 
+- Function is a collection thats doing something
+- function expression =  its assigned as a value some where
+- Functions are values that can be assigned to variables, and can be passed as arguments to other functions or they can be returned from functions.
+- Closure is when a function "remembers" the variables outside of it, even when you pass that function else ware.
