@@ -21,4 +21,7 @@
 - Control structures include *Conditionals- do these instructions if Z is true *Loops- do these instructions X many times *Exceptions- di instruction set A but if an error occurs switch to instruction set B.
 - The position of value in a list is known as its index its like an address.
 - Appending is adding something to the end of a list.
-- 
+- For loops repeat for a specified number of times.
+- While loops repeat until a condition changes.
+- For each loops repeat for each item in a collection.
+- Each execution of those instructions is called an iteration.
