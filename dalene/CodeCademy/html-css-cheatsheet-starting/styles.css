@@ -1,0 +1,37 @@
+body {
+  background: rgb(128, 75, 189);
+  margin: 0;
+  padding: 0;
+}
+table {
+  height: 40%;
+  left: 10%;
+  margin: 20px auto;
+  overflow-y: scroll;
+  position: static;
+  width: 80%;
+}
+thead th {
+  background: #88ccf1;
+  color: #fff;
+  font-family: "monospace", sans-serif;
+  font-size: 16px;
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+tr {
+  background: #f4f7f8;
+  border-bottom: 1px solid #fff;
+  margin-bottom: 5px;
+}
+
+th,
+td {
+  font-family: "monospace", sans-serif;
+  font-weight: 400;
+  padding: 20px;
+  text-align: left;
+  width: 33.3333%;
+  font-size: 18px;
+}
