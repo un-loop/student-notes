@@ -1,0 +1,27 @@
+7-29
+- Programing is the mental process of thinking up instructions to give to a machine(like a computer)
+- Coding is the process of transforming those ideas into a written language that a computer can understand.
+- Variable is a was of saving a piece of info with a specific name.
+- By giving a value a name we can easily reuse that value over an over again in out code.
+- A programing variable allows us to easily change a value throughout out code and repetition.
+- Hard coding is when a value is used without assigning it to a variable.
+- Create or declare a variable by giving it a name and setting it equal to a value  terrain = 'Lake'
+- Data is the pieces of info we use to build programs.
+- Primitives are the most basic data types 
+*Numbers *Strings *Boolean
+- If the function matches the data type you will get an answer if it don't you will get an error.
+- Strings are used to *display data that uses text or symbols *to add or remove text *modify characters.
+- COmparison operators are < > ==.
+- Operators are symbols that represent different ways of modifying, comparing and evaluating info.
+- A function is a sequence of instructions that preforms a specific task packaged as a unit.
+- Define a function specify the instructions inputs and name of the function.
+- Calling a unction executes all the instructions.
+- Functions organize a program into distinct units making interchanging and editing easy.
+- Programs are a set of instructions executed in a certain order this order is called control flow its just as important as the instructions.
+- Control structures include *Conditionals- do these instructions if Z is true *Loops- do these instructions X many times *Exceptions- di instruction set A but if an error occurs switch to instruction set B.
+- The position of value in a list is known as its index its like an address.
+- Appending is adding something to the end of a list.
+- For loops repeat for a specified number of times.
+- While loops repeat until a condition changes.
+- For each loops repeat for each item in a collection.
+- Each execution of those instructions is called an iteration.
