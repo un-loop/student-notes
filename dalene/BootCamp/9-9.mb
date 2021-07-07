@@ -1,0 +1,12 @@
+THINGS WE WILL BE LEARNING ABOUT
+~Redux ~Node ~AWS ~MongoDB ~DynamoDB ~SQL ~JS stack ~Material UI ~Algorithms ~Data Structure ~Advanced Math Concepts ~Software Architecture ~How to think like a software DEV ~Reasoning ~How to find help ~HTTP ~HTML/CSS
+~Functional Components & React Hooks
+-  ~npx create-react-app app name to start a new front end react app
+- <Fragment> allows you to group elements </>
+- Material-UI is a frontend React library it has allot of built in features 
+- you can test the features on the website and see what they do 
+- <cssBaseline/> is a good feature to use instead of a style sheet
+- Almost all react Components have an onClick method
+- Any dependency's added to .JSON will have green bars by them
+- You can build the bones of your code & add dummy code
+- Create new objects when updating state
